@@ -5,9 +5,9 @@
 
 props:
   font_heading:
-    value: "'Fira Sans', Helvetica, Arial, sans-serif"
+    value: "'Montserrat', Helvetica, Arial, sans-serif"
   font_text:
-    value: "'Fira Sans', Helvetica, Arial, sans-serif"
+    value: "'Lato', Helvetica, Arial, sans-serif"
   weight_bold:
     value: "700"
   weight_semi_bold:
