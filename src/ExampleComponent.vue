@@ -1,7 +1,7 @@
 <template>
   <component :is="type" :class="['example', variation]">
     <div id="Example-container">
-      <slot/>
+      <slot />
     </div>
   </component>
 </template>
@@ -69,7 +69,7 @@ export default {
 .example {
   @include reset;
   @include stack-space($space-m);
-  color: set-text-color($color-rich-black, $color-white);
+  color: set-text-color($color-grey-darker, $color-white);
   @media #{$media-query-m} {
     @include stack-space($space-xl);
   }

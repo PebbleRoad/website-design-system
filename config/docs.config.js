@@ -51,8 +51,6 @@ module.exports = {
     {
       name: "Getting Started",
       content: "../docs/getting-started.md",
-      // Needs to be loaded in somewhere as this is also shown in
-      // element, Pattern & Template overviews.
       components: "../docs/components/status/**/[A-Z]*.vue",
       sectionDepth: 1,
       exampleMode: "hide",
@@ -61,6 +59,13 @@ module.exports = {
     {
       name: "Design Principles",
       content: "../docs/principles.md",
+      sectionDepth: 1,
+      exampleMode: "hide",
+      usageMode: "hide",
+    },
+    {
+      name: "Terminology",
+      content: "../docs/terminology.md",
       sectionDepth: 1,
       exampleMode: "hide",
       usageMode: "hide",
@@ -108,13 +113,6 @@ module.exports = {
       exampleMode: "expand",
       usageMode: "expand",
       sectionDepth: 2,
-    },
-    {
-      name: "Downloads",
-      content: "../docs/downloads.md",
-      exampleMode: "hide",
-      usageMode: "hide",
-      sectionDepth: 1,
     },
     {
       name: "FAQ",
