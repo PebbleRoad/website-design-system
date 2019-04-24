@@ -59,13 +59,13 @@ export default {
 
 <style lang="scss" scoped>
 // Design Tokens with local scope
-$color-nav-link: $color-vermilion;
-$color-nav-link-active: $color-vermilion;
+$color-nav-link: $color-asphalt;
+$color-nav-link-active: $color-vermilion-darker;
 
 .nav {
   @include stack-space($space-m);
-  font-family: $font-text;
-  font-size: $size-s;
+  font-family: $font-heading;
+  font-size: $size-m;
   line-height: $line-height-m;
   color: $color-white;
   text-align: center;
@@ -75,8 +75,8 @@ $color-nav-link-active: $color-vermilion;
   }
   a {
     color: $color-nav-link;
-    padding: $space-xs 0;
-    margin: 0 $space-xs;
+    padding: $space-xxs 0;
+    margin: 0 $space-s;
     text-decoration: none;
     display: inline-block;
     &:hover {
@@ -94,10 +94,10 @@ $color-nav-link-active: $color-vermilion;
 <docs>
   ```jsx
   <NavBar active="Dashboard" :navItems="[
-    {name: 'Dashboard', component: 'Dashboard', href: '/example/'},
-    {name: 'Posts', component: 'Posts', href: '/example/'},
-    {name: 'Users', component: 'Users', href: '/example/'},
-    {name: 'Settings', component: 'Settings', href: '/example/'}
+    {name: 'Dashboard', component: 'Dashboard', href: '/#/'},
+    {name: 'Posts', component: 'Posts', href: '/#/'},
+    {name: 'Users', component: 'Users', href: '/#/'},
+    {name: 'Settings', component: 'Settings', href: '/#/'}
   ]"/>
   ```
 </docs>
