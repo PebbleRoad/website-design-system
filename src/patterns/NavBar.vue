@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" class="nav">
+  <component :is="type" :class="['nav', alignItems]">
     <a
       v-for="(item, index) in navItems"
       :key="index"
@@ -30,11 +30,11 @@ export default {
       default: "nav",
     },
     /**
-     * State which tab is active when initiated (using name of the component).
+     * State which tab is active when initiated (using name of the component). If <codenull</code>, assumes no active component
      */
     active: {
-      required: true,
       type: String,
+      defaut: "null",
     },
     /**
      * Menu items to be displayed on the nav bar.
@@ -42,6 +42,13 @@ export default {
     navItems: {
       required: true,
       type: Array,
+    },
+    /**
+     * Determines if items should align <code>left</code>, <code>center</code> or <code>right</code>.
+     */
+    alignItems: {
+      type: String,
+      default: "center",
     },
   },
   computed: {
@@ -68,7 +75,6 @@ $color-nav-link-active: $color-vermilion-darker;
   font-size: $size-m;
   line-height: $line-height-m;
   color: $color-white;
-  text-align: center;
   width: 100%;
   @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries
@@ -80,14 +86,25 @@ $color-nav-link-active: $color-vermilion-darker;
     text-decoration: none;
     display: inline-block;
     &:hover {
-      color: $color-nav-link-active;
+      border-bottom: 2px solid $color-nav-link;
     }
     &.active {
       border-bottom: 2px solid $color-nav-link;
-      font-weight: $weight-bold;
       color: $color-nav-link;
     }
   }
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 </style>
 
