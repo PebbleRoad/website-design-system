@@ -9,6 +9,8 @@
 /** Card explanation */
 export default {
   name: "Card",
+  status: "prototype",
+  release: "1.0.0",
   props: {
     /**
      * <code>div</code> or <code>span</code>
