@@ -8,6 +8,8 @@ props:
     value: "'Montserrat', Helvetica, Arial, sans-serif"
   font_text:
     value: "'Lato', Helvetica, Arial, sans-serif"
+  font_quote:
+    value: "'PT Serif', Times New Roman, serif"
   weight_bold:
     value: "700"
   weight_semi_bold:

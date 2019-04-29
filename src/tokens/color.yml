@@ -10,8 +10,6 @@
 aliases:
   vivid_vermilion:
     value: "19, 90%"
-  white:
-    value: "#fff"
   asphalt:
     value: "0, 0%"
 
@@ -50,20 +48,33 @@ props:
     category: color_group_3
 
   color_grey_darker:
-    value: "hsla({!asphalt}, 21%, 1)"
+    value: "#01131b"
     category: color_group_4
   color_grey_dark:
-    value: "#hsla({!asphalt}, 51%, 1)"
+    value: "#aaacad"
     category: color_group_4
   color_grey:
-    value: "#hsla({!asphalt}, 71%, 1)"
+    value: "#e1e3e4"
     category: color_group_4
   color_grey_light:
-    value: "#hsla({!asphalt}, 91%, 1)"
+    value: "#f4f4f4"
     category: color_group_4
   color_white:
-    value: "{!white}"
+    value: "#ffffff"
     category: color_group_4
+
+  system_green:
+    value: "#11aa58"
+    category: color_group_5
+  system_green_light:
+    value: "#d1f8cb"
+    category: color_group_5
+  system_red:
+    value: "#e62325"
+    category: color_group_5
+  system_red_light:
+    value: "#ffe5e9"
+    category: color_group_5
 
 global:
   type: color
