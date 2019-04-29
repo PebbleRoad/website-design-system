@@ -58,7 +58,7 @@ export default {
   border-radius: $radius-default;
   box-shadow: $shadow-s-inset;
   margin-bottom: $space-xs;
-  font-size: $size-s;
+  font-size: $size-xs;
   font-family: $font-text;
   color: $color-grey-darker;
   background: tint(#c4cdd5, 85%);
@@ -68,7 +68,7 @@ export default {
   width: 100%;
   span {
     margin-left: 5px;
-    color: $color-grey;
+    color: $color-grey-dark;
     user-select: none;
     font-style: normal;
   }

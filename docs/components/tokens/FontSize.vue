@@ -62,7 +62,7 @@ export default {
     letter-spacing: -0.02em;
     margin-left: 10px;
     font-weight: $weight-normal;
-    color: $color-grey;
+    color: $color-grey-dark;
     user-select: none;
     font-style: normal;
   }

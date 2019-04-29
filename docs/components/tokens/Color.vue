@@ -119,7 +119,7 @@ h3 {
   -moz-osx-font-smoothing: grayscale;
   margin-bottom: $space-m;
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
-  font-size: $size-s;
+  font-size: $size-xs;
   font-family: $font-text;
   color: $color-grey-darker;
   border-radius: $radius-default;
@@ -136,15 +136,15 @@ h3 {
     span {
       color: $color-grey-darker;
       em {
-        color: $color-grey;
+        color: $color-grey-dark;
       }
     }
   }
   span {
     margin-bottom: $space-xs;
     line-height: 1.3;
-    color: $color-grey;
-    font-size: $size-s;
+    color: $color-grey-dark;
+    font-size: $size-xs;
     width: 100%;
     float: left;
     em {
