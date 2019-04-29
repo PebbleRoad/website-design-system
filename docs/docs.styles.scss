@@ -10,8 +10,8 @@
 /* LOCAL DESIGN TOKENS
 --------------------------------------------- */
 
-$docs-grey: #c4cdd5;
-$docs-grey-dark: #4d5865;
+$docs-grey: #e1e3e4;
+$docs-grey-dark: #aaacad;
 $docs-status-ready: #7cb518;
 $docs-breakpoint: 800px;
 $docs-breakpoint-small: 600px;
@@ -70,7 +70,7 @@ div[class^="rsg--wrapper"] > h2[class^="rsg--heading"] {
   width: calc(100% + #{$space-xl * 2});
   margin: -#{$space-s} -#{$space-xl} $space-l -#{$space-xl};
   background: mix($color-pale-sky, $color-stone, 80%);
-  font-size: $size-xxl;
+  font-size: $size-xl;
   a:hover {
     text-decoration: none;
     cursor: default;
@@ -145,7 +145,7 @@ h4[class^="rsg--heading"] a {
   font-weight: $weight-semi-bold;
   letter-spacing: 0;
   margin: $space-l 0 $space-m;
-  font-size: $size-l;
+  font-size: $size-m;
   line-height: $line-height-s;
   color: $docs-color-heading;
 }
@@ -331,7 +331,7 @@ div[class^="rsg--sidebar"] {
 
       // Sidebar second level link
       a[class*="rsg--link"] {
-        font-size: $size-s;
+        font-size: $size-xs;
         font-weight: $weight-normal;
         -webkit-font-smoothing: subpixel-antialiased;
         -moz-osx-font-smoothing: auto;

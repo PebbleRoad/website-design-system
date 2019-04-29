@@ -18,6 +18,12 @@
 <spacing />
 ```
 
+## Shadows
+
+```
+<box-shadow />
+```
+
 ## All Tokens
 
 ```
