@@ -43,27 +43,27 @@ export default {
 }
 h1 {
   letter-spacing: $spacing-xs;
-  font-size: $size-xxl;
+  font-size: $size-xl;
   font-weight: $weight-semi-bold;
   @media #{$media-query-l} {
-    font-size: $size-xxxl;
+    font-size: $size-xxl;
   }
 }
 h2 {
   letter-spacing: $spacing-s;
-  font-size: $size-xxl;
-  font-weight: $weight-semi-bold;
-}
-h3 {
   font-size: $size-xl;
   font-weight: $weight-semi-bold;
 }
-h4 {
+h3 {
   font-size: $size-l;
   font-weight: $weight-semi-bold;
 }
-h5 {
+h4 {
   font-size: $size-m;
+  font-weight: $weight-semi-bold;
+}
+h5 {
+  font-size: $size-s;
   font-weight: $weight-normal;
 }
 h6 {
