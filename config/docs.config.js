@@ -87,6 +87,7 @@ module.exports = {
         "../docs/components/tokens/Color.vue",
         "../docs/components/tokens/FontSize.vue",
         "../docs/components/tokens/Spacing.vue",
+        "../docs/components/tokens/BoxShadow.vue",
         "../docs/components/tokens/All.vue",
       ],
     },

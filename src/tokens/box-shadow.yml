@@ -5,7 +5,13 @@
 
 props:
   shadow_s:
-    value: "0 0 0 1px rgba(92,106,196,.1)"
+    value: "0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.1)"
+  shadow_m:
+    value: "0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.2)"
+  shadow_l:
+    value: "0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 0 4px 0 rgba(0, 0, 0, 0.2)"
+  shadow_xl:
+    value: "0 16px 30px 0 rgba(0, 0, 0, 0.5), 0 0 10px 0 rgba(0, 0, 0, 0.2)"
 global:
   type: ...
   category: box-shadow
