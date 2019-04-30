@@ -51,7 +51,7 @@ $positive-text: #7cb518;
   color: $color-grey-darker;
   font-family: $font-text;
   font-weight: $weight-normal;
-  font-size: $size-m;
+  font-size: $size-s;
   line-height: $line-height-m;
   @media #{$media-query-l} {
     // This is how you’d use design tokens with media queries

@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :href="href" :type="submit" :class="['button', size, state, variation]">
+  <component :is="type" :href="href" :type="submit" :class="['button', state, variation]">
     <slot />
   </component>
 </template>
@@ -26,20 +26,6 @@ export default {
         return value.match(/(button|a)/)
       },
     },
-    /**
-     * The size of the button. Defaults to medium.
-     * `small, medium, large`
-     */
-    size: {
-      type: String,
-      default: "medium",
-      validator: value => {
-        return value.match(/(small|medium|large)/)
-      },
-    },
-    /**
-     * When setting the button’s type to a link, use this option to give a href.
-     */
     href: {
       type: String,
       default: null,
@@ -62,7 +48,7 @@ export default {
       type: String,
       default: null,
       validator: value => {
-        return value.match(/(hover|active|focus)/)
+        return value.match(/(hover|active|focus|disabled)/)
       },
     },
     /**
@@ -71,7 +57,7 @@ export default {
      */
     variation: {
       type: String,
-      default: null,
+      default: "primary",
       validator: value => {
         return value.match(/(primary|secondary)/)
       },
@@ -85,12 +71,14 @@ export default {
   @include reset;
   @include stack-space($space-m);
   @include inline-space($space-xs);
+  @include inset-squish-space($space-xs);
   will-change: transform;
   transition: all 0.2s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: $space-xs $space-s;
   font-weight: $weight-semi-bold;
-  font-size: $size-m;
+  font-size: $size-s;
   font-family: $font-text;
   line-height: $line-height-m;
   text-decoration: none;
@@ -98,33 +86,37 @@ export default {
   align-items: center;
   justify-content: center;
   border: 0;
-  box-shadow: inset 0 0 0 2px $color-vermilion;
+  box-shadow: inset 0 0 0 2px $color-asphalt;
   border-radius: $radius-default;
   background: transparent;
-  color: $color-vermilion;
+  color: $color-asphalt;
   cursor: pointer;
   &:hover,
   &.hover {
     color: $color-white;
-    background: $color-vermilion;
-    transform: translateZ(0) scale(1.03);
+    background: $color-asphalt;
   }
   &:active,
   &.active {
-    transition: none;
-    background: $color-vermilion-dark;
-    box-shadow: none;
+    background: $color-grey-darker;
+    box-shadow: $shadow-xl;
     color: $color-white;
     transform: translateZ(0) scale(1);
   }
-
   &:focus,
   &.focus {
-    background: $color-vermilion-darker;
-    box-shadow: none;
+    background: $color-asphalt;
+    box-shadow: $shadow-focus;
     color: $color-white;
-    transform: translateZ(0) scale(1);
     outline: 0;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    color: $color-grey-dark;
+    background-color: $color-grey;
+    border: none;
   }
 
   // For icons inside buttons
@@ -134,39 +126,61 @@ export default {
     color: $color-vermilion;
   }
 
-  // Various button sizes
-  &.large {
-    @include inset-squish-space($space-s);
-    font-size: $size-l;
-  }
-  &.medium {
-    @include inset-squish-space($space-s);
-    font-size: $size-m;
-  }
-  &.small {
-    @include inset-squish-space($space-xs);
-    font-size: $size-s;
-  }
-
   // Primary button
   &.primary {
-    background: $color-vermilion;
+    background: $color-asphalt;
     color: $color-white;
     box-shadow: none;
+    border: 1px solid $color-asphalt;
     &:hover,
     &.hover {
-      background-color: shade($color-vermilion, 12%);
+      transform: translateZ(0) scale(1.03);
+      box-shadow: $shadow-m;
     }
     &:active,
     &.active {
-      background-color: shade($color-vermilion, 20%);
+      background-color: $color-grey-darker;
       transition: none;
     }
-    &:focus {
-      outline: 0;
-    }
-    .user-is-tabbing &:focus,
+    &:focus,
     &.focus {
+      box-shadow: $shadow-focus;
+    }
+    &:disabled,
+    &.disabled {
+      cursor: not-allowed;
+      color: $color-grey-dark;
+      background-color: $color-grey;
+      border: none;
+    }
+  }
+
+  // Secondary button
+  &.secondary {
+    background: $color-white;
+    color: $color-asphalt;
+    box-shadow: none;
+    border: 1px solid $color-asphalt;
+    &:hover,
+    &.hover {
+      transform: translateZ(0) scale(1.03);
+      box-shadow: $shadow-m;
+    }
+    &:active,
+    &.active {
+      background-color: $color-sand;
+      transition: none;
+    }
+    &:focus,
+    &.focus {
+      box-shadow: $shadow-focus;
+    }
+    &:disabled,
+    &.disabled {
+      cursor: not-allowed;
+      color: $color-grey-dark;
+      background-color: $color-grey;
+      border: none;
     }
   }
 }
@@ -175,14 +189,19 @@ export default {
 <docs>
   ```jsx
   <div>
-    <Button variation="primary" size="large">Primary Button</Button>
-    <Button variation="primary" size="medium">Medium</Button>
-    <Button variation="primary" size="small">Small</Button>
-    <br />
     <Button>Default Button</Button>
-    <Button state="hover">:hover</Button>
-    <Button state="active">:active</Button>
-    <Button state="focus">:focus</Button>
-  </div>
+    <br />
+    <Button variation="primary">Default Primary Button</Button>
+    <Button variation="primary" state="hover">:hover</Button>
+    <Button variation="primary" state="active">:active</Button>
+    <Button variation="primary" state="focus">:focus</Button>
+    <Button variation="primary" state="disabled">:disabled</Button>
+    <br />
+    <Button variation="secondary">Default Secondary Button</Button>
+    <Button variation="secondary" state="hover">:hover</Button>
+    <Button variation="secondary" state="active">:active</Button>
+    <Button variation="secondary" state="focus">:focus</Button>
+    <Button variation="secondary" state="disabled">:disabled</Button>
+      </div>
   ```
 </docs>

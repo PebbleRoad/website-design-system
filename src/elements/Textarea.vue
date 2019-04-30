@@ -113,7 +113,7 @@ $color-placeholder: tint($color-grey, 50%);
   @include stack-space($space-s);
   font-weight: $weight-normal;
   font-family: $font-text;
-  font-size: $size-m;
+  font-size: $size-s;
   line-height: $line-height-xs;
   width: auto;
   &-expand {
@@ -122,7 +122,7 @@ $color-placeholder: tint($color-grey, 50%);
   label {
     cursor: pointer;
     display: block;
-    font-size: $size-s;
+    font-size: $size-xs;
     color: tint($color-grey-darker, 20%);
     @include stack-space($space-xs);
   }
@@ -134,7 +134,7 @@ $color-placeholder: tint($color-grey, 50%);
     appearance: none;
     resize: vertical;
     min-height: $space-xxl;
-    font-size: $size-m;
+    font-size: $size-s;
     font-family: $font-text;
     background: $color-white;
     border-radius: $radius-default;

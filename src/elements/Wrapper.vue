@@ -1,6 +1,6 @@
 <template>
   <component :is="type" class="wrapper">
-    <slot/>
+    <slot />
   </component>
 </template>
 
@@ -31,7 +31,7 @@ export default {
   @include inset-space($space-l);
   font-family: $font-text;
   font-weight: $weight-normal;
-  font-size: $size-m;
+  font-size: $size-s;
   line-height: $line-height-m;
   width: 100%;
   @media #{$media-query-l} {
@@ -39,7 +39,6 @@ export default {
   }
 }
 </style>
-
 
 <docs>
   ```jsx
