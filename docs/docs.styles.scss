@@ -157,6 +157,7 @@ p[class^="rsg--para"] {
   color: $docs-color-text;
   margin-bottom: $space-s;
   line-height: $line-height-m;
+  font-size: $size-s;
   strong a[class^="rsg--link"] {
     font-weight: $weight-semi-bold;
   }
@@ -407,7 +408,7 @@ pre[class^="rsg--pre"],
   height: auto;
   border: 0;
   font-family: Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: $size-s;
+  font-size: $size-xs;
   margin: 0;
   min-height: $space-xxl / 1.5;
   margin-bottom: $space-m;
@@ -445,7 +446,7 @@ div[class^="rsg--tab"] {
       border: 0;
       margin: 0;
       letter-spacing: $spacing-l;
-      font-size: $size-s;
+      font-size: $size-xs;
       font-weight: $weight-normal;
       font-family: $font-text;
       line-height: $line-height-s;
@@ -509,7 +510,8 @@ div[class^="rsg--tab"] {
 // Code highlighting elsewhere
 span[class^="rsg--type"],
 code[class^="rsg--code"] {
-  color: $color-grey;
+  color: $color-grey-dark;
+  font-size: $size-xs;
 }
 span[class^="rsg--name"] code[class^="rsg--code"],
 code.name {

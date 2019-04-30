@@ -72,7 +72,7 @@ $color-nav-link-active: $color-vermilion-darker;
 .nav {
   @include stack-space($space-m);
   font-family: $font-heading;
-  font-size: $size-m;
+  font-size: $size-s;
   line-height: $line-height-m;
   color: $color-white;
   width: 100%;
