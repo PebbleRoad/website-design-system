@@ -5,6 +5,8 @@
 </template>
 
 <script>
+const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/)
+
 /**
  * Buttons are generally used for interface actions. Suitable for all-purpose use.
  * Defaults to appearance that has white background with grey border.
@@ -63,6 +65,11 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      svg: req("./" + this.name + ".svg").replace(/^<svg /, `<svg style="fill: ${this.fill}" `),
+    }
+  },
 }
 </script>
 
@@ -119,11 +126,9 @@ export default {
     border: none;
   }
 
-  // For icons inside buttons
+  //For icons inside buttons
   .icon {
-    float: right;
-    margin: -#{$space-xs} -#{$space-xs} -#{$space-s} $space-xs/2;
-    color: $color-vermilion;
+    margin: 0 0 $space-xxxs/-2 $space-xxs;
   }
 
   // Primary button
@@ -190,6 +195,10 @@ export default {
   ```jsx
   <div>
     <Button>Default Button</Button>
+    <Button>
+      Under review
+      <Icon name="review" fill="#ffffff" size="small" class="icon" />
+    </Button>
     <br />
     <Button variation="primary">Default Primary Button</Button>
     <Button variation="primary" state="hover">:hover</Button>
