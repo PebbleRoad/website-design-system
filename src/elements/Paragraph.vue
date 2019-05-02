@@ -27,7 +27,7 @@ export default {
      */
     variation: {
       type: String,
-      default: "medium",
+      default: "small",
       validator: value => {
         return value.match(/(medium|intro|large|small)/)
       },
@@ -47,15 +47,12 @@ export default {
   font-weight: $weight-normal;
   line-height: $line-height-m;
   color: shade($color-grey, 70%);
-  font-size: $size-m;
+  font-size: $size-s;
 
   a {
-    color: $color-vermilion;
-    text-decoration: none;
-    &:hover {
-      color: darken($color-vermilion, 20%);
-    }
+    font-size: inherit;
   }
+
   &.intro {
     @include stack-space($space-m);
     font-family: $font-heading;
@@ -65,8 +62,8 @@ export default {
   &.large {
     font-size: $size-l;
   }
-  &.small {
-    font-size: $size-s;
+  &.medium {
+    font-size: $size-m;
   }
 }
 </style>
@@ -75,13 +72,13 @@ export default {
   ```jsx
   <div>
     <Paragraph>
-      Design isn’t just about the look and feel. Design is <a href="https://viljamis.com/2017/design-tools-processes/">how it works</a>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s <a href="https://viljamisdesign.com/process/">why we start</a> all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
+      Design isn’t just about the look and feel. Design is <Link href="https://viljamis.com/2017/design-tools-processes/">how it works</Link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s <Link href="https://viljamisdesign.com/process/">why we start</Link> all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
     </Paragraph>
-    <Paragraph variation="small">
-      Our core belief is that the products we design should work across anything that can access the web.
+    <Paragraph variation="medium">
+      Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
     </Paragraph>
     <Paragraph variation="large">
-      Our core belief is that the products we design should work across anything that can access the web.
+      Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
     </Paragraph>
   </div>
   ```
