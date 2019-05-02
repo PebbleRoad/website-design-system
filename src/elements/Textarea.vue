@@ -107,7 +107,7 @@ export default {
 
 <style lang="scss" scoped>
 // Design Tokens with local scope
-$color-placeholder: tint($color-grey, 50%);
+$color-placeholder: $color-grey-dark;
 
 .textarea {
   @include stack-space($space-s);
@@ -123,8 +123,8 @@ $color-placeholder: tint($color-grey, 50%);
     cursor: pointer;
     display: block;
     font-size: $size-xs;
-    color: tint($color-grey-darker, 20%);
-    @include stack-space($space-xs);
+    color: $color-asphalt;
+    @include stack-space($space-xxs);
   }
   textarea {
     @include reset;
@@ -133,17 +133,16 @@ $color-placeholder: tint($color-grey, 50%);
     -webkit-appearance: none;
     appearance: none;
     resize: vertical;
-    min-height: $space-xxl;
+    min-height: $space-xl;
     font-size: $size-s;
     font-family: $font-text;
     background: $color-white;
     border-radius: $radius-default;
-    color: set-text-color($color-grey-darker, $color-white);
+    color: $color-asphalt;
     width: 100%;
     margin: 0;
-    border: 0;
-    box-shadow: inset 0 1px 0 0 rgba($color-grey-darker, 0.07),
-      0 0 0 1px tint($color-grey-darker, 80%);
+    border: 1x solid $color-asphalt;
+    box-shadow: 0;
     &::-webkit-input-placeholder {
       -webkit-font-smoothing: antialiased;
       color: $color-placeholder;
@@ -158,22 +157,23 @@ $color-placeholder: tint($color-grey, 50%);
     }
     &:hover,
     &.hover {
-      box-shadow: 0 1px 5px 0 rgba($color-grey-darker, 0.07),
-        0 0 0 1px tint($color-grey-darker, 60%);
+      box-shadow: $shadow-s;
     }
     &:focus,
     &.focus {
       transition: box-shadow 0.2s ease;
-      box-shadow: inset 0 0 0 1px $color-vermilion, 0 0 0 1px $color-vermilion;
+      box-shadow: $shadow-focus;
       outline: 0;
     }
     &[disabled] {
       -webkit-font-smoothing: antialiased;
       box-shadow: 0 0 0 1px tint($color-grey-darker, 80%);
       background: lighten($color-placeholder, 42%);
-      color: tint($color-placeholder, 20%);
+      color: $color-asphalt;
       cursor: not-allowed;
       opacity: 0.7;
+      background: $color-grey;
+      border: 1px solid $color-grey;
     }
   }
 }
@@ -184,7 +184,8 @@ $color-placeholder: tint($color-grey, 50%);
   <div>
     <Textarea label="Default textarea" placeholder="Write your text" id="textarea-1" />
     <Textarea label=":focus" state="focus" placeholder="Write your text" id="textarea-2" />
-    <Textarea label="[disabled]" disabled value="Write your text" id="textarea-3" />
+    <Textarea label="[disabled] with no placeholder" disabled id="textarea-3" />
+    <Textarea label="[disabled] with placeholder" disabled value="Disabled text" id="textarea-3" />
   </div>
   ```
 </docs>

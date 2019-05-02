@@ -119,7 +119,7 @@ export default {
 
 <style lang="scss" scoped>
 // Design Tokens with local scope
-$color-placeholder: tint($color-grey, 50%);
+$color-placeholder: $color-grey-dark;
 
 .input {
   @include stack-space($space-s);
@@ -135,8 +135,8 @@ $color-placeholder: tint($color-grey, 50%);
     cursor: pointer;
     display: block;
     font-size: $size-xs;
-    color: tint($color-grey-darker, 20%);
-    @include stack-space($space-xs);
+    color: $color-asphalt;
+    @include stack-space($space-xxs);
   }
   input {
     @include reset;
@@ -148,12 +148,11 @@ $color-placeholder: tint($color-grey, 50%);
     font-family: $font-text;
     background: $color-white;
     border-radius: $radius-default;
-    color: set-text-color($color-grey-darker, $color-white);
+    color: $color-asphalt;
     width: 100%;
     margin: 0;
-    border: 0;
-    box-shadow: inset 0 1px 0 0 rgba($color-grey-darker, 0.07),
-      0 0 0 1px tint($color-grey-darker, 80%);
+    border: 1px solid $color-asphalt;
+    box-shadow: 0 0 0 0;
     &::-webkit-input-placeholder {
       -webkit-font-smoothing: antialiased;
       color: $color-placeholder;
@@ -168,13 +167,12 @@ $color-placeholder: tint($color-grey, 50%);
     }
     &:hover,
     &.hover {
-      box-shadow: 0 1px 5px 0 rgba($color-grey-darker, 0.07),
-        0 0 0 1px tint($color-grey-darker, 60%);
+      box-shadow: $shadow-s;
     }
     &:focus,
     &.focus {
       transition: box-shadow 0.2s ease;
-      box-shadow: inset 0 0 0 1px $color-vermilion, 0 0 0 1px $color-vermilion;
+      box-shadow: $shadow-focus;
       outline: 0;
     }
     &[disabled] {
@@ -182,9 +180,11 @@ $color-placeholder: tint($color-grey, 50%);
       -moz-osx-font-smoothing: grayscale;
       box-shadow: 0 0 0 1px tint($color-grey-darker, 80%);
       background: lighten($color-placeholder, 42%);
-      color: tint($color-placeholder, 20%);
+      color: $color-asphalt;
       cursor: not-allowed;
       opacity: 0.7;
+      background: $color-grey;
+      border: 1px solid $color-grey;
     }
   }
 }
@@ -196,7 +196,8 @@ $color-placeholder: tint($color-grey, 50%);
     <Input label="Default input" placeholder="Write your text" id="input-1" />
     <Input label=":hover" state="hover" placeholder="Write your text" id="input-2" />
     <Input label=":focus" state="focus" placeholder="Write your text" id="input-3" />
-    <Input label="[disabled]" disabled value="Write your text" id="input-4" />
+    <Input label="[disabled]" disabled id="input-4" />
+    <Input label="[disabled]" value="Disabled text" disabled id="input-4" />
   </div>
   ```
 </docs>
