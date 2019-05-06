@@ -153,6 +153,7 @@ $color-placeholder: $color-grey-dark;
     margin: 0;
     border: 1px solid $color-asphalt;
     box-shadow: 0 0 0 0;
+    padding: $space-xs $space-s;
     &::-webkit-input-placeholder {
       -webkit-font-smoothing: antialiased;
       color: $color-placeholder;
@@ -198,6 +199,11 @@ $color-placeholder: $color-grey-dark;
     <Input label=":focus" state="focus" placeholder="Write your text" id="input-3" />
     <Input label="[disabled]" disabled id="input-4" />
     <Input label="[disabled]" value="Disabled text" disabled id="input-4" />
+
+    <div style="display:flex;">
+      <Button>Subscribe</Button>
+      <Input placeholder="Write your text" id="input-1"/>
+    </div>
   </div>
   ```
 </docs>

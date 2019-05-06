@@ -56,19 +56,19 @@ h2 {
 }
 h3 {
   font-size: $size-l;
-  font-weight: $weight-normal;
+  font-weight: $weight-bold;
 }
 h4 {
   font-size: $size-m;
-  font-weight: $weight-normal;
+  font-weight: $weight-bold;
 }
 h5 {
   font-size: $size-s;
-  font-weight: $weight-normal;
+  font-weight: $weight-bold;
 }
 h6 {
   font-size: $size-xs;
-  font-weight: $weight-normal;
+  font-weight: $weight-bold;
 }
 </style>
 

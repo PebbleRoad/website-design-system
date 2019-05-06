@@ -57,7 +57,10 @@ export default {
   text-decoration: none;
   cursor: pointer;
   padding-bottom: 2px;
-  border-bottom: 2px solid $color-granite;
+  border-bottom: 2px solid $color-vermilion;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.2s ease;
   &:hover,
   &.hover {
@@ -92,12 +95,12 @@ export default {
   <Link state="focus" href="#" style="margin-right: 20px;">:focus</Link>
   <Link state="disabled" href="#" style="margin-right: 20px;">:disabled</Link>
   <Link href="#" style="margin-right: 20px;">
-    <Icon name="review" fill="#363636" size="small" />
     Click me
+    <Icon name="home" fill="#363636" size="small" />
   </Link>
   <Link href="#" style="margin-right: 20px;">
-    <Icon name="prototype" fill="#363636" size="medium" />
     Click me
+    <Icon name="home" fill="#363636" size="medium" />
   </Link>
 </div>
 ```

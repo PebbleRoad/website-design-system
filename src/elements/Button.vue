@@ -87,7 +87,6 @@ export default {
   font-weight: $weight-semi-bold;
   font-size: $size-s;
   font-family: $font-text;
-  line-height: $line-height-m;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -196,8 +195,8 @@ export default {
   <div>
     <Button>Default Button</Button>
     <Button>
-      Under review
-      <Icon name="review" fill="#ffffff" size="small" class="icon" />
+      More here
+      <Icon name="arrow-right" fill="#ffffff" size="small" class="icon" />
     </Button>
     <br />
     <Button variation="primary">Default Primary Button</Button>
