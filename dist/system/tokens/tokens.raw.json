@@ -183,6 +183,13 @@
       "originalValue": "14px",
       "name": "size_xs"
     },
+    "size_xxs": {
+      "type": "number",
+      "category": "font-size",
+      "value": "12px",
+      "originalValue": "12px",
+      "name": "size_xxs"
+    },
     "font_heading": {
       "type": "...",
       "category": "font",
