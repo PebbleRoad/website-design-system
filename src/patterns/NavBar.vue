@@ -81,12 +81,13 @@ $color-nav-link-active: $color-vermilion-darker;
   }
   a {
     color: $color-nav-link;
-    padding: $space-xxs 0;
+    padding: $space-xxxs/2 0;
     margin: 0 $space-s;
     text-decoration: none;
     display: inline-block;
     &:hover {
       border-bottom: 2px solid $color-nav-link;
+      transition: all 0.1s ease;
     }
     &.active {
       border-bottom: 2px solid $color-nav-link;

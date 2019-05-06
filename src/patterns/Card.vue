@@ -42,6 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  @include reset;
   width: inherit;
   box-sizing: border-box;
 }
@@ -54,19 +55,19 @@ img {
 }
 
 .border--show {
-  border: 2px solid $color-grey;
+  box-shadow: $shadow-s;
 }
 
 .s {
-  padding: 8px;
+  padding: $space-s;
 }
 
 .m {
-  padding: 16px;
+  padding: $space-m;
 }
 
 .l {
-  padding: 24px;
+  padding: $space-l;
 }
 </style>
 
@@ -83,10 +84,18 @@ img {
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
     </Card>
 
-    <Card border padding="s">
-      <Paragraph>TAGLINE</Paragraph>
+    <Card border padding="m">
       <Heading level="h4">Lorem Ipsum</Heading>
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Tag>Category</Tag>
+      <Tag>Category</Tag>
+    </Card> 
+
+    <Card border padding="l">
+      <Heading level="h4">Lorem Ipsum</Heading>
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Tag>Category</Tag>
+      <Tag>Category</Tag>
     </Card> 
   </Grid>
 
