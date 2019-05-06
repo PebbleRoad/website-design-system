@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :class="['paragraph', variation]">
+  <component :is="type" :class="['paragraph', variation, { 'bold--show': bold === true }]">
     <slot />
   </component>
 </template>
@@ -32,6 +32,10 @@ export default {
         return value.match(/(medium|intro|large|small)/)
       },
     },
+    bold: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -44,7 +48,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   transition: color 0.3s ease;
   font-family: $font-text;
-  font-weight: $weight-normal;
+  // font-weight: $weight-normal;
   line-height: $line-height-m;
   color: shade($color-grey, 70%);
   font-size: $size-s;
@@ -65,6 +69,9 @@ export default {
   &.medium {
     font-size: $size-m;
   }
+  &.bold--show {
+    font-weight: $weight-bold;
+  }
 }
 </style>
 
@@ -79,6 +86,9 @@ export default {
     </Paragraph>
     <Paragraph variation="large">
       Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
+    </Paragraph>
+    <Paragraph bold>
+      Design isn’t just about the look and feel. Design is <Link href="https://viljamis.com/2017/design-tools-processes/">how it works</Link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s <Link href="https://viljamisdesign.com/process/">why we start</Link> all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
     </Paragraph>
   </div>
   ```
