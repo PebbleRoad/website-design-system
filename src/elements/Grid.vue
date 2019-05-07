@@ -41,6 +41,7 @@ export default {
   display: grid;
   width: 100%;
   box-sizing: border-box;
+  grid-template-columns: 1fr;
 }
 
 .one {
@@ -48,34 +49,49 @@ export default {
 }
 
 .two {
-  grid-template-columns: 1fr 1fr;
+  @media #{$media-query-m} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media #{$media-query-l} {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .three {
-  grid-template-columns: 1fr 1fr 1fr;
+  @media #{$media-query-m} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media #{$media-query-l} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .four {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media #{$media-query-m} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media #{$media-query-l} {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .s {
-  grid-gap: 8px;
+  grid-gap: $size-s;
 }
 
 .m {
-  grid-gap: 16px;
+  grid-gap: $size-m;
 }
 
 .l {
-  grid-gap: 24px;
+  grid-gap: $size-l;
 }
 </style>
 
 <docs>
   ```jsx
   <div>
-    <Grid columns="three" spacing="s">
+    <Grid columns="four" spacing="l">
       <div style="background-color:lightgray; text-align:center;">
         <TextStyle>grid 1</TextStyle>
       </div>
