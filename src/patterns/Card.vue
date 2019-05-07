@@ -1,5 +1,8 @@
 <template>
-  <component :is="type" :class="['card', { 'border--show': border === true }]">
+  <component
+    :is="type"
+    :class="[{ 'border--show': border === true }, { 'fix--height': fixedHeight === true }, 'card']"
+  >
     <img v-if="media" :src="media" alt="card-media" />
     <div :class="padding"><slot /></div>
   </component>
@@ -36,21 +39,38 @@ export default {
       type: String,
       default: null,
     },
+    /**
+     * Fixes height of card to 255px
+     * */
+    fixedHeight: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+$card-height: 255px;
+
 .card {
   @include reset;
   width: inherit;
-  box-sizing: border-box;
+
+  &.fix--height {
+    height: $card-height;
+
+    div {
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
 
 img {
   width: inherit;
   object-fit: cover;
-  height: 180px;
+  height: $card-height;
   align-content: center;
 }
 
@@ -73,7 +93,11 @@ img {
 
 <docs>
   ```jsx
-  <Grid columns="two" spacing="m">
+  <Grid columns="three" spacing="m">
+    <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Heading level="h4">Lorem Ipsum</Heading>
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+    </Card>
     <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
       <Heading level="h4">Lorem Ipsum</Heading>
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
@@ -83,6 +107,13 @@ img {
       <Heading level="h4">Lorem Ipsum</Heading>
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
     </Card>
+
+    <Card border padding="s">
+      <Heading level="h4">Lorem Ipsum</Heading>
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Tag>Category</Tag>
+      <Tag>Category</Tag>
+    </Card> 
 
     <Card border padding="m">
       <Heading level="h4">Lorem Ipsum</Heading>
@@ -97,6 +128,13 @@ img {
       <Tag>Category</Tag>
       <Tag>Category</Tag>
     </Card> 
+
+    <Card border fixedHeight padding="l">
+      <Heading level="h4">Lorem Ipsum</Heading>
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Link>LINK</Link>
+    </Card> 
+
   </Grid>
 
   ```
