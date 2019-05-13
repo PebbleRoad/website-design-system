@@ -5,7 +5,7 @@
 
 props:
   size_xxl:
-    value: "72px"
+    value: "60px"
   size_xl:
     value: "48px"
   size_l:

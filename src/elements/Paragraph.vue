@@ -48,10 +48,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   transition: color 0.3s ease;
   font-family: $font-text;
-  // font-weight: $weight-normal;
   line-height: $line-height-m;
   color: shade($color-grey, 70%);
-  font-size: $size-s;
+  font-size: 14px;
+
+  @media #{$media-query-m} {
+    font-size: $size-s;
+  }
 
   a {
     font-size: inherit;
@@ -64,10 +67,18 @@ export default {
     font-size: $size-l;
   }
   &.large {
-    font-size: $size-l;
+    font-size: $size-m;
+
+    @media #{$media-query-m} {
+      font-size: $size-l;
+    }
   }
   &.medium {
-    font-size: $size-m;
+    font-size: 20px;
+
+    @media #{$media-query-m} {
+      font-size: $size-m;
+    }
   }
   &.bold--show {
     font-weight: $weight-bold;

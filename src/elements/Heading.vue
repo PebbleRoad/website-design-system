@@ -37,26 +37,29 @@ export default {
   font-family: $font-heading;
   line-height: $line-height-xs;
   color: $color-grey-darker;
-  @media #{$media-query-l} {
-    // This is how you’d use design tokens with media queries
-  }
 }
 h1 {
   letter-spacing: $spacing-xs;
   font-size: $size-xl;
   font-weight: $weight-bold;
-  @media #{$media-query-l} {
+  @media #{$media-query-m} {
     font-size: $size-xxl;
   }
 }
 h2 {
   letter-spacing: $spacing-s;
-  font-size: $size-xl;
-  font-weight: $weight-bold;
-}
-h3 {
   font-size: $size-l;
   font-weight: $weight-bold;
+  @media #{$media-query-m} {
+    font-size: $size-xl;
+  }
+}
+h3 {
+  font-size: $size-m;
+  font-weight: $weight-bold;
+  @media #{$media-query-m} {
+    font-size: $size-l;
+  }
 }
 h4 {
   font-size: $size-m;
@@ -78,7 +81,6 @@ h6 {
     <Heading>The quick brown fox</Heading>
     <Heading level="h2">The quick brown fox</Heading>
     <Heading level="h3">The quick brown fox</Heading>
-    <Heading level="h4">The quick brown fox</Heading>
   </div>
   ```
 </docs>

@@ -141,6 +141,7 @@ $color-placeholder: $color-grey-dark;
   input {
     @include reset;
     @include inset-squish-space($space-s);
+    box-sizing: border-box;
     transition: all 0.2s ease;
     -webkit-appearance: none;
     appearance: none;
