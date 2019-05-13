@@ -56,6 +56,7 @@ $card-height: 255px;
 .card {
   @include reset;
   width: inherit;
+  height: 100%;
 
   &.fix--height {
     height: $card-height;
@@ -80,14 +81,26 @@ img {
 
 .s {
   padding: $space-s;
+  height: inherit;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .m {
   padding: $space-m;
+  height: inherit;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .l {
   padding: $space-l;
+  height: inherit;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>
 
@@ -132,6 +145,12 @@ img {
     <Card border fixedHeight padding="l">
       <Heading level="h4">Lorem Ipsum</Heading>
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Link>LINK</Link>
+    </Card> 
+
+    <Card border fixedHeight padding="l">
+      <Heading level="h4">Lorem Ipsum</Heading>
+      <Paragraph>Lorem ipsum dolor sit amet</Paragraph>
       <Link>LINK</Link>
     </Card> 
 
