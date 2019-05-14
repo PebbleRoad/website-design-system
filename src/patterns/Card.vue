@@ -57,6 +57,7 @@ $card-height: 255px;
   @include reset;
   width: inherit;
   height: 100%;
+  box-sizing: border-box;
 
   &.fix--height {
     height: $card-height;
@@ -81,29 +82,14 @@ img {
 
 .s {
   padding: $space-s;
-  height: inherit;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .m {
   padding: $space-m;
-  height: inherit;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .l {
   padding: $space-l;
-  height: inherit;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 </style>
 
