@@ -49,7 +49,7 @@ export default {
 .tag {
   @include reset;
   @include stack-space($space-m);
-  @include inline-space($space-xxxs);
+  @include inline-space($space-xxs);
   font-family: $font-text;
   color: $color-asphalt;
   border: 1px solid $color-asphalt;

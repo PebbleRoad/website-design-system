@@ -83,6 +83,7 @@ img {
   padding: $space-s;
   height: inherit;
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -91,6 +92,7 @@ img {
   padding: $space-m;
   height: inherit;
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -99,6 +101,7 @@ img {
   padding: $space-l;
   height: inherit;
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
