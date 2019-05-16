@@ -48,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 .tag {
   @include reset;
-  @include stack-space($space-m);
+  @include stack-space($space-s);
   @include inline-space($space-xs);
   font-family: $font-text;
   color: $color-asphalt;

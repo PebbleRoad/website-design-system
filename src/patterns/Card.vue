@@ -85,11 +85,17 @@ img {
 }
 
 .m {
-  padding: $space-m;
+  padding: $space-s;
+  @media #{$media-query-m} {
+    padding: $space-m;
+  }
 }
 
 .l {
-  padding: $space-l;
+  padding: $space-m;
+  @media #{$media-query-m} {
+    padding: $space-l;
+  }
 }
 </style>
 

@@ -1,12 +1,14 @@
 <template>
   <component :is="type" :class="['nav', alignItems]">
-    <a
-      v-for="(item, index) in navItems"
-      :key="index"
-      :href="item.href"
-      :class="{ active: localActive === item.component }"
-      v-html="item.name"
-    />
+    <div class="navlinks">
+      <a
+        v-for="(item, index) in navItems"
+        :key="index"
+        :href="item.href"
+        :class="[, { active: localActive === item.component }]"
+        v-html="item.name"
+      />
+    </div>
   </component>
 </template>
 
@@ -48,7 +50,7 @@ export default {
      */
     alignItems: {
       type: String,
-      default: "center",
+      default: "right",
     },
   },
   computed: {
@@ -65,24 +67,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Design Tokens with local scope
 $color-nav-link: $color-asphalt;
 $color-nav-link-active: $color-vermilion-darker;
 
 .nav {
   @include stack-space($space-m);
   font-family: $font-heading;
-  font-size: $size-s;
+  font-size: $size-xs;
   line-height: $line-height-m;
   color: $color-white;
   width: 100%;
-  @media #{$media-query-l} {
-    // This is how you’d use design tokens with media queries
+  display: flex;
+
+  &.left {
+    justify-content: flex-start;
   }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  @media #{$media-query-m} {
+    font-size: $size-s;
+  }
+}
+
+.navlinks {
+  display: inline;
+
   a {
+    display: block;
     color: $color-nav-link;
     padding: $space-xxxs/2 0;
-    margin: 0 $space-s;
+    margin: 0 $space-xs;
     text-decoration: none;
     display: inline-block;
     &:hover {
@@ -93,29 +114,29 @@ $color-nav-link-active: $color-vermilion-darker;
       border-bottom: 2px solid $color-nav-link;
       color: $color-nav-link;
     }
+    &.focus {
+      border: 2px solid $color-granite;
+    }
+
+    @media #{$media-query-m} {
+      margin: 0 $space-s;
+    }
   }
-}
-
-.left {
-  text-align: left;
-}
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
 }
 </style>
 
 <docs>
   ```jsx
-  <NavBar active="Dashboard" :navItems="[
-    {name: 'Dashboard', component: 'Dashboard', href: '/#/'},
-    {name: 'Posts', component: 'Posts', href: '/#/'},
-    {name: 'Users', component: 'Users', href: '/#/'},
-    {name: 'Settings', component: 'Settings', href: '/#/'}
-  ]"/>
+  <div>
+    <NavBar active="Dashboard" :navItems="[
+      {name: 'Dashboard', component: 'Dashboard', href: '/#/'},
+      {name: 'Posts', component: 'Posts', href: '/#/'},
+      {name: 'Users', component: 'Users', href: '/#/'},
+      {name: 'Settings', component: 'Settings', href: '/#/'}
+    ]"/>
+  <Paragraph>
+    Design isn’t just about the look and feel. Design is how it works, and we believe the best way to focus on this is to work as close to the end result as possible. That’s why we start all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
+  </Paragraph>
+  </div>
   ```
 </docs>
