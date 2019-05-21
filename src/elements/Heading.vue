@@ -33,13 +33,14 @@ export default {
 <style lang="scss" scoped>
 .heading {
   @include reset;
+  margin-bottom: $space-xs;
   font-family: $font-heading;
 }
 h1 {
   letter-spacing: $spacing-xs;
   font-size: $size-2xl;
   line-height: $line-height-2xl;
-  margin-bottom: $spacing-s;
+  margin-bottom: $space-s;
   font-weight: $weight-bold;
   @media #{$media-query-m} {
     font-size: $size-3xl;
@@ -50,7 +51,6 @@ h2 {
   letter-spacing: $spacing-s;
   font-size: $size-xl;
   line-height: $line-height-xl;
-  margin-bottom: $spacing-xs;
   font-weight: $weight-bold;
 }
 h3 {
