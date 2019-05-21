@@ -33,39 +33,36 @@ export default {
 <style lang="scss" scoped>
 .heading {
   @include reset;
-  // @include stack-space($space-m);
   font-family: $font-heading;
 }
 h1 {
+  @include stack-space($space-m);
   letter-spacing: $spacing-xs;
-  font-size: $size-xl;
-  line-height: $line-height-xl;
+  font-size: $size-2xl;
+  line-height: $line-height-2xl;
   font-weight: $weight-bold;
   @media #{$media-query-m} {
-    font-size: $size-2xl;
-    line-height: $line-height-2xl;
+    font-size: $size-3xl;
+    line-height: $line-height-3xl;
   }
 }
 h2 {
+  @include stack-space($space-m);
   letter-spacing: $spacing-s;
+  font-size: $size-xl;
+  line-height: $line-height-xl;
+  font-weight: $weight-bold;
+}
+h3 {
+  @include stack-space($space-s);
   font-size: $size-l;
   line-height: $line-height-l;
   font-weight: $weight-bold;
-  @media #{$media-query-m} {
-    font-size: $size-l;
-  }
-}
-h3 {
-  font-size: $size-m;
-  line-height: $line-height-m;
-  font-weight: $weight-bold;
-  @media #{$media-query-m} {
-    font-size: $size-m;
-  }
 }
 h4 {
-  font-size: $size-s;
-  line-height: $line-height-s;
+  @include stack-space($space-s);
+  font-size: $size-m;
+  line-height: $line-height-m;
   font-weight: $weight-bold;
 }
 </style>

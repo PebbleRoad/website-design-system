@@ -84,16 +84,18 @@ export default {
     <Heading level="h1">Heading h1</Heading>
     <Heading level="h2">Heading h2</Heading>
     <Heading level="h3">Heading h3</Heading>
-    <br />
-    <Paragraph>
-      Design isn’t just about the look and feel. Design is <Link href="https://viljamis.com/2017/design-tools-processes/">how it works</Link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s why we start all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
+    <br />    
+    <Paragraph variation="large">
+      Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
     </Paragraph>
     <Paragraph variation="medium">
       Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
     </Paragraph>
-    <Paragraph variation="large">
-      Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
+    <Paragraph>
+      Design isn’t just about the look and feel. Design is <Link href="https://viljamis.com/2017/design-tools-processes/">how it works</Link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s why we start all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
     </Paragraph>
+
+
     <Paragraph variation="intro">
       Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
     </Paragraph>
