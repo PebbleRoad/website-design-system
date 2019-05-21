@@ -33,44 +33,39 @@ export default {
 <style lang="scss" scoped>
 .heading {
   @include reset;
-  @include stack-space($space-m);
+  // @include stack-space($space-m);
   font-family: $font-heading;
-  line-height: $line-height-xs;
-  color: $color-grey-darker;
 }
 h1 {
   letter-spacing: $spacing-xs;
   font-size: $size-xl;
+  line-height: $line-height-xl;
   font-weight: $weight-bold;
   @media #{$media-query-m} {
-    font-size: $size-xxl;
+    font-size: $size-2xl;
+    line-height: $line-height-2xl;
   }
 }
 h2 {
   letter-spacing: $spacing-s;
   font-size: $size-l;
-  font-weight: $weight-bold;
-  @media #{$media-query-m} {
-    font-size: $size-xl;
-  }
-}
-h3 {
-  font-size: $size-m;
+  line-height: $line-height-l;
   font-weight: $weight-bold;
   @media #{$media-query-m} {
     font-size: $size-l;
   }
 }
-h4 {
+h3 {
   font-size: $size-m;
+  line-height: $line-height-m;
   font-weight: $weight-bold;
+  @media #{$media-query-m} {
+    font-size: $size-m;
+  }
 }
-h5 {
+h4 {
   font-size: $size-s;
-  font-weight: $weight-bold;
-}
-h6 {
-  font-size: $size-xs;
+  line-height: $line-height-s;
   font-weight: $weight-bold;
 }
 </style>
@@ -81,6 +76,7 @@ h6 {
     <Heading>The quick brown fox</Heading>
     <Heading level="h2">The quick brown fox</Heading>
     <Heading level="h3">The quick brown fox</Heading>
+    <Heading level="h4">The quick brown fox</Heading>
   </div>
   ```
 </docs>

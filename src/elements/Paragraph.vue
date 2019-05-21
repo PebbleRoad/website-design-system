@@ -48,38 +48,30 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   transition: color 0.3s ease;
   font-family: $font-text;
-  line-height: $line-height-m;
-  color: shade($color-grey, 70%);
-  font-size: 14px;
-
-  @media #{$media-query-m} {
-    font-size: $size-s;
-  }
+  color: $color-asphalt;
+  font-size: $size-s;
+  line-height: $line-height-s;
 
   a {
     font-size: inherit;
   }
 
   &.intro {
-    @include stack-space($space-m);
     font-family: $font-heading;
     font-weight: $weight-light;
     font-size: $size-l;
   }
-  &.large {
-    font-size: $size-m;
 
-    @media #{$media-query-m} {
-      font-size: $size-l;
-    }
-  }
   &.medium {
-    font-size: 20px;
-
-    @media #{$media-query-m} {
-      font-size: $size-m;
-    }
+    font-size: $size-m;
+    line-height: $line-height-m;
   }
+
+  &.large {
+    font-size: $size-l;
+    line-height: $line-height-l;
+  }
+
   &.bold--show {
     font-weight: $weight-bold;
   }
@@ -89,8 +81,12 @@ export default {
 <docs>
   ```jsx
   <div>
+    <Heading level="h1">Heading h1</Heading>
+    <Heading level="h2">Heading h2</Heading>
+    <Heading level="h3">Heading h3</Heading>
+    <br />
     <Paragraph>
-      Design isn’t just about the look and feel. Design is <Link href="https://viljamis.com/2017/design-tools-processes/">how it works</Link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s <Link href="https://viljamisdesign.com/process/">why we start</Link> all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
+      Design isn’t just about the look and feel. Design is <Link href="https://viljamis.com/2017/design-tools-processes/">how it works</Link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s why we start all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
     </Paragraph>
     <Paragraph variation="medium">
       Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
@@ -98,9 +94,10 @@ export default {
     <Paragraph variation="large">
       Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
     </Paragraph>
-    <Paragraph bold>
-      Design isn’t just about the look and feel. Design is <Link href="https://viljamis.com/2017/design-tools-processes/">how it works</Link>, and we believe the best way to focus on this is to work as close to the end result as possible. That’s <Link href="https://viljamisdesign.com/process/">why we start</Link> all our projects with simple sketches, and quickly transition into designing working prototypes in code. This is done by the same designers who started the work, which ensures that our original design intent is carried all the way to the end product.
+    <Paragraph variation="intro">
+      Our <Link href="/#/Design%20Principles">core belief</Link> is that the products we design should work across anything that can access the web.
     </Paragraph>
+    
   </div>
   ```
 </docs>

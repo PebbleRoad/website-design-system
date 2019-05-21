@@ -103,52 +103,50 @@ img {
   ```jsx
   <Grid columns="three" spacing="m">
     <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
     </Card>
     <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
     </Card>
 
     <Card media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
     </Card>
 
     <Card border padding="s">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
       <Tag>Category</Tag>
       <Tag>Category</Tag>
+       <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
     </Card> 
 
     <Card border padding="m">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
       <Tag>Category</Tag>
       <Tag>Category</Tag>
+       <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
     </Card> 
 
     <Card border padding="l">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
-      <Tag>Category</Tag>
-      <Tag>Category</Tag>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
+      <div style="height:20px;"><Link>LINK</Link></div>
     </Card> 
-
-    <Card border fixedHeight padding="l">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
-      <Link>LINK</Link>
-    </Card> 
-
-    <Card border fixedHeight padding="l">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet</Paragraph>
-      <Link>LINK</Link>
-    </Card> 
-
   </Grid>
 
   ```

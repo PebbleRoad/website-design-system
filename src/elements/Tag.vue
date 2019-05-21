@@ -48,8 +48,7 @@ export default {
 <style lang="scss" scoped>
 .tag {
   @include reset;
-  @include stack-space($space-s);
-  @include inline-space($space-xs);
+  @include inline-space($space-xxxs);
   font-family: $font-text;
   color: $color-asphalt;
   border: 1px solid $color-asphalt;
@@ -58,12 +57,11 @@ export default {
 
 .small {
   padding: $space-xxxs $space-xxs;
-  font-size: $size-xxs;
-}
-
-.medium {
-  padding: $space-xxs $space-xs;
   font-size: $size-xs;
+}
+.xsmall {
+  padding: $space-xxxs $space-xxs;
+  font-size: $size-xxs;
 }
 
 .invert {
@@ -78,7 +76,7 @@ export default {
     <Tag>Default tag</Tag>
     <Tag fill="#d7e4eb">Default tag</Tag>
     <Tag invert fill="#a79a93">Inverted tag</Tag>
-    <Tag spacing="medium">Medium tag</Tag>
+    <Tag spacing="xsmall">Default tag</Tag>
   </div>
   ```
 </docs>

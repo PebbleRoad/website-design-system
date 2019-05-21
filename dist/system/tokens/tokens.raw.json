@@ -141,53 +141,53 @@
       "originalValue": "hsla({!vivid_vermilion}, 53%, 1)",
       "name": "color_vermilion"
     },
-    "size_xxl": {
+    "size_2xl": {
       "type": "number",
       "category": "font-size",
-      "value": "60px",
-      "originalValue": "60px",
-      "name": "size_xxl"
+      "value": "3.157rem",
+      "originalValue": "3.157rem",
+      "name": "size_2xl"
     },
     "size_xl": {
       "type": "number",
       "category": "font-size",
-      "value": "48px",
-      "originalValue": "48px",
+      "value": "2.369rem",
+      "originalValue": "2.369rem",
       "name": "size_xl"
     },
     "size_l": {
       "type": "number",
       "category": "font-size",
-      "value": "32px",
-      "originalValue": "32px",
+      "value": "1.777rem",
+      "originalValue": "1.777rem",
       "name": "size_l"
     },
     "size_m": {
       "type": "number",
       "category": "font-size",
-      "value": "24px",
-      "originalValue": "24px",
+      "value": "1.333rem",
+      "originalValue": "1.333rem",
       "name": "size_m"
     },
     "size_s": {
       "type": "number",
       "category": "font-size",
-      "value": "16px",
-      "originalValue": "16px",
+      "value": "18px",
+      "originalValue": "18px",
       "name": "size_s"
     },
     "size_xs": {
       "type": "number",
       "category": "font-size",
-      "value": "14px",
-      "originalValue": "14px",
+      "value": "0.8rem",
+      "originalValue": "0.8rem",
       "name": "size_xs"
     },
     "size_xxs": {
       "type": "number",
       "category": "font-size",
-      "value": "12px",
-      "originalValue": "12px",
+      "value": "0.75rem",
+      "originalValue": "0.75rem",
       "name": "size_xxs"
     },
     "font_heading": {
@@ -449,25 +449,46 @@
       "originalValue": "16px",
       "name": "space_s"
     },
+    "line_height_2xl": {
+      "type": "number",
+      "category": "line-height",
+      "value": "1.3",
+      "originalValue": "1.3",
+      "name": "line_height_2xl"
+    },
+    "line_height_xl": {
+      "type": "number",
+      "category": "line-height",
+      "value": "1.3",
+      "originalValue": "1.3",
+      "name": "line_height_xl"
+    },
+    "line_height_l": {
+      "type": "number",
+      "category": "line-height",
+      "value": "1.4",
+      "originalValue": "1.4",
+      "name": "line_height_l"
+    },
     "line_height_m": {
       "type": "number",
       "category": "line-height",
-      "value": "1.6",
-      "originalValue": "1.6",
+      "value": "1.5",
+      "originalValue": "1.5",
       "name": "line_height_m"
     },
     "line_height_s": {
       "type": "number",
       "category": "line-height",
-      "value": "1.3",
-      "originalValue": "1.3",
+      "value": "1.75",
+      "originalValue": "1.75",
       "name": "line_height_s"
     },
     "line_height_xs": {
       "type": "number",
       "category": "line-height",
-      "value": "1",
-      "originalValue": "1",
+      "value": "1.8",
+      "originalValue": "1.8",
       "name": "line_height_xs"
     }
   }

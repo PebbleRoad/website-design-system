@@ -56,7 +56,6 @@ export default {
   color: $color-asphalt;
   text-decoration: none;
   cursor: pointer;
-  padding-bottom: 2px;
   border-bottom: 2px solid $color-vermilion;
   display: inline-flex;
   align-items: center;

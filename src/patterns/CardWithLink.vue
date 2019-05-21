@@ -95,35 +95,45 @@ $card-height: 255px;
   ```jsx
   <Grid columns="three" spacing="m">
     <CardWithLink border padding="s">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
       <div style="height:20px;"><Link>LINK</Link></div>
     </CardWithLink> 
 
     <CardWithLink border padding="m">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
       <div style="height:20px;"><Link>LINK</Link></div>
     </CardWithLink> 
 
     <CardWithLink border padding="l">
-      <Heading level="h4">Lorem Ipsum</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Paragraph>
       <div style="height:20px;"><Link>LINK</Link></div>
     </CardWithLink> 
 
     <CardWithLink border fixedHeight padding="l">
       <div>
-        <Heading level="h4">Lorem Ipsum</Heading>
-        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis feugiat aliquam.</Paragraph>
+         <Paragraph>      
+          <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Paragraph>
       </div>
       <div style="height:20px;"><Link>LINK</Link></div>
     </CardWithLink> 
 
     <CardWithLink border fixedHeight padding="l">
       <div>
-        <Heading level="h4">Lorem Ipsum</Heading>
-        <Paragraph>Lorem ipsum dolor sit amet</Paragraph>
+        <Paragraph>      
+          <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
+          Lorem ipsum dolor sit amet.
+        </Paragraph>
       </div>
       <div style="height:20px;"><Link>LINK</Link></div>
     </CardWithLink> 
