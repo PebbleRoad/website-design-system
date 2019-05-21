@@ -4,20 +4,20 @@
 #
 
 props:
-  size_xxl:
-    value: "60px"
+  size_2xl:
+    value: "3.157rem"
   size_xl:
-    value: "48px"
+    value: "2.369rem"
   size_l:
-    value: "32px"
+    value: "1.777rem"
   size_m:
-    value: "24px"
+    value: "1.333rem"
   size_s:
-    value: "16px"
+    value: "18px"
   size_xs:
-    value: "14px"
+    value: "0.8rem"
   size_xxs:
-    value: "12px"
+    value: "0.75rem"
 
 global:
   type: number
