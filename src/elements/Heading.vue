@@ -36,10 +36,10 @@ export default {
   font-family: $font-heading;
 }
 h1 {
-  @include stack-space($space-m);
   letter-spacing: $spacing-xs;
   font-size: $size-2xl;
   line-height: $line-height-2xl;
+  margin-bottom: $spacing-s;
   font-weight: $weight-bold;
   @media #{$media-query-m} {
     font-size: $size-3xl;
@@ -47,20 +47,18 @@ h1 {
   }
 }
 h2 {
-  @include stack-space($space-m);
   letter-spacing: $spacing-s;
   font-size: $size-xl;
   line-height: $line-height-xl;
+  margin-bottom: $spacing-xs;
   font-weight: $weight-bold;
 }
 h3 {
-  @include stack-space($space-s);
   font-size: $size-l;
   line-height: $line-height-l;
   font-weight: $weight-bold;
 }
 h4 {
-  @include stack-space($space-s);
   font-size: $size-m;
   line-height: $line-height-m;
   font-weight: $weight-bold;

@@ -33,7 +33,8 @@ export default {
   },
   data() {
     return {
-      tokens: this.orderData(designTokens.props),
+      // tokens: this.orderData(designTokens.props),
+      tokens: designTokens.props,
     }
   },
 }
@@ -54,9 +55,9 @@ export default {
   @include reset;
   font-family: $font-heading;
   font-weight: $weight-bold;
-  line-height: $line-height-xs;
+  // line-height: $line-height-xs;
   color: $color-grey-darker;
-  margin-bottom: $space-s;
+  // margin-bottom: $space-s;
   font-style: normal;
   span {
     letter-spacing: -0.02em;

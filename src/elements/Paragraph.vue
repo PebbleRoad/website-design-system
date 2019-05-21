@@ -54,12 +54,13 @@ export default {
 
   a {
     font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
   }
 
   &.intro {
-    font-family: $font-heading;
-    font-weight: $weight-light;
-    font-size: $size-l;
+    font-size: 1.5rem;
+    line-height: $line-height-m;
   }
 
   &.medium {
