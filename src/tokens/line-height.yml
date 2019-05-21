@@ -4,10 +4,12 @@
 #
 
 props:
+  line_height_3xl:
+    value: "1.3"
   line_height_2xl:
     value: "1.3"
   line_height_xl:
-    value: "1.3"
+    value: "1.4"
   line_height_l:
     value: "1.4"
   line_height_m:
