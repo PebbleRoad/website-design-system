@@ -23,7 +23,7 @@ $size-2xl: 2.369rem;
 $size-xl: 2rem;
 $size-l: 1.777rem;
 $size-m: 1.333rem;
-$size-s: 18px;
+$size-s: 1rem;
 $size-xs: 0.8rem;
 $size-xxs: 0.75rem;
 $font-heading: 'Montserrat', Helvetica, Arial, sans-serif;
@@ -271,7 +271,7 @@ $spacing-ratio: 1.7;
   @if $unit == "rem" {
     @return $value;
   } @else if $unit == "px" {
-    @return $value / $size-m * 1rem;
+    @return $value / $size-s * 1rem;
   } @else if $unit == "em" {
     @return $unit / 1em * 1rem;
   } @else {
@@ -288,9 +288,9 @@ $spacing-ratio: 1.7;
   @if $unit == "px" {
     @return $value;
   } @else if $unit == "em" {
-    @return ($value / 1em) * $size-m;
+    @return ($value / 1em) * $size-s;
   } @else if $unit == "rem" {
-    @return ($value / 1rem) * $size-m;
+    @return ($value / 1rem) * $size-s;
   } @else {
     @error "Value must be in rem, em, or px.";
   }

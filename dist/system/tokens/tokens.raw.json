@@ -179,8 +179,8 @@
     "size_s": {
       "type": "number",
       "category": "font-size",
-      "value": "18px",
-      "originalValue": "18px",
+      "value": "1rem",
+      "originalValue": "1rem",
       "name": "size_s"
     },
     "size_xs": {
