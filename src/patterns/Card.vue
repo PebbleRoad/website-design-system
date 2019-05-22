@@ -67,6 +67,11 @@ $card-height: 255px;
       box-sizing: border-box;
     }
   }
+  &:hover,
+  &.hover {
+    transition: all 0.2s ease;
+    box-shadow: $shadow-l;
+  }
 }
 
 img {
