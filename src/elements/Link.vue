@@ -56,28 +56,28 @@ export default {
   color: $color-asphalt;
   text-decoration: none;
   cursor: pointer;
-  border-bottom: 2px solid $color-vermilion;
+  border-bottom: 1px solid $color-vermilion;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
   &:hover,
   &.hover {
-    border-bottom: 2px solid $color-asphalt;
+    border-bottom: 1px solid $color-asphalt;
   }
   &:active,
   &.active {
-    border-bottom: 2px solid $color-asphalt;
+    border-bottom: 1px solid $color-asphalt;
   }
   &:focus,
   &.focus {
-    border: 2px solid $color-granite;
+    border: 1px solid $color-granite;
   }
   &:disabled,
   &.disabled {
     cursor: not-allowed;
     color: $color-grey;
-    border-bottom: 2px solid $color-grey;
+    border-bottom: 1px solid $color-grey;
   }
 }
 </style>
