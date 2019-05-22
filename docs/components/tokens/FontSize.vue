@@ -5,7 +5,7 @@
       :key="index"
       class="font"
       v-if="prop.category === 'font-size'"
-      :style="{ fontSize: prop.value }"
+      :style="{ fontSize: convertRemToPx(prop.value) }"
     >
       ${{ prop.name.replace(/_/g, "-") }}
       <span>({{ prop.value }})</span>
@@ -25,17 +25,24 @@ import orderBy from "lodash/orderBy"
  */
 export default {
   name: "FontSize",
+  data() {
+    return {
+      // tokens: this.orderData(designTokens.props),
+      tokens: designTokens.props,
+      baseline: 18,
+    }
+  },
   methods: {
     orderData: function(data) {
       let order = orderBy(data, "value", "desc")
       return order
     },
-  },
-  data() {
-    return {
-      // tokens: this.orderData(designTokens.props),
-      tokens: designTokens.props,
-    }
+    convertRemToPx: function(remValue) {
+      const px = remValue.includes("rem")
+        ? remValue.replace(/[^0-9.]/g, "") * this.baseline + "px"
+        : remValue
+      return px
+    },
   },
 }
 </script>

@@ -15,7 +15,7 @@ props:
   size_m:
     value: "1.333rem"
   size_s:
-    value: "18px"
+    value: "1rem"
   size_xs:
     value: "0.8rem"
   size_xxs:
