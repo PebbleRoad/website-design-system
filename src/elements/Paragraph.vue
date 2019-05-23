@@ -50,7 +50,7 @@ export default {
   font-family: $font-text;
   color: $color-asphalt;
   font-size: $size-s;
-  line-height: $line-height-s;
+  line-height: $line-height-xs;
 
   a {
     font-size: inherit;
@@ -70,7 +70,7 @@ export default {
 
   &.large {
     font-size: $size-l;
-    line-height: $line-height-l;
+    line-height: $line-height-m;
   }
 
   &.bold--show {

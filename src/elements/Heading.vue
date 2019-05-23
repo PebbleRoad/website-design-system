@@ -39,18 +39,18 @@ export default {
 h1 {
   letter-spacing: $spacing-xs;
   font-size: $size-2xl;
-  line-height: $line-height-2xl;
+  line-height: $line-height-xl;
   margin-bottom: $space-s;
   font-weight: $weight-bold;
   @media #{$media-query-m} {
     font-size: $size-3xl;
-    line-height: $line-height-3xl;
+    line-height: $line-height-l;
   }
 }
 h2 {
   letter-spacing: $spacing-s;
   font-size: $size-xl;
-  line-height: $line-height-xl;
+  line-height: $line-height-l;
   font-weight: $weight-bold;
 }
 h3 {
