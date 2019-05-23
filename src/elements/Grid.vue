@@ -23,7 +23,7 @@ export default {
       type: String,
       required: true,
       default: "one",
-      validator: value => value.match(/(one|two|three|four)/),
+      validator: value => value.match(/(one|two|three|four|six)/),
     },
     /**
      * Specifies <code>grid-gap</code>, options <code>s</code>, <code>m</code> or <code>l</code>
@@ -72,6 +72,15 @@ export default {
   }
   @media #{$media-query-l} {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.six {
+  @media #{$media-query-m} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media #{$media-query-l} {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
