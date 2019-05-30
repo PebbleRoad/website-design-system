@@ -92,8 +92,8 @@ export default {
   <div>
     <Icon name="ready" aria-label="Component is ready" fill="#7cb518" />
     <Icon name="review" fill="rgb(255,186,10)" />
-    <Icon name="deprecated" fill="rgb(235,59,36)" />
-    <Icon name="prototype" fill="rgb(37,138,239)" />
+    <Icon name="arrow-right" fill="rgb(235,59,36)" />
+    <Icon name="arrow-left" fill="rgb(37,138,239)" />
   </div>
   ```
 </docs>
