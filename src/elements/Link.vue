@@ -5,8 +5,6 @@
 </template>
 
 <script>
-const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/)
-
 /**
  * Links
  */
@@ -37,11 +35,6 @@ export default {
       type: String,
       default: null,
     },
-  },
-  data() {
-    return {
-      svg: req("./" + this.name + ".svg").replace(/^<svg /, `<svg style="fill: ${this.fill}" `),
-    }
   },
 }
 </script>
@@ -93,14 +86,6 @@ export default {
   <Link state="active" href="#" style="margin-right: 20px;">:active</Link>
   <Link state="focus" href="#" style="margin-right: 20px;">:focus</Link>
   <Link state="disabled" href="#" style="margin-right: 20px;">:disabled</Link>
-  <Link href="#" style="margin-right: 20px;">
-    Click me
-    <Icon name="home" fill="#363636" size="small" />
-  </Link>
-  <Link href="#" style="margin-right: 20px;">
-    Click me
-    <Icon name="home" fill="#363636" size="medium" />
-  </Link>
 </div>
 ```
 </docs>
