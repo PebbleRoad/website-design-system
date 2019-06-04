@@ -5,8 +5,6 @@
 </template>
 
 <script>
-const req = require.context("@/assets/icons/", true, /^\.\/.*\.svg$/)
-
 /**
  * Buttons are generally used for interface actions. Suitable for all-purpose use.
  * Defaults to appearance that has white background with grey border.
@@ -64,11 +62,6 @@ export default {
         return value.match(/(primary|secondary)/)
       },
     },
-  },
-  data() {
-    return {
-      svg: req("./" + this.name + ".svg").replace(/^<svg /, `<svg style="fill: ${this.fill}" `),
-    }
   },
 }
 </script>
