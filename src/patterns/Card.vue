@@ -1,10 +1,14 @@
 <template>
-  <component
-    :is="type"
-    :class="[{ 'border--show': border === true }, { 'fix--height': fixedHeight === true }, 'card']"
-  >
+  <component :is="type" :class="[{ 'border--show': border === true }, 'card']">
     <img v-if="media" :src="media" alt="card-media" />
-    <div :class="padding"><slot /></div>
+    <div :class="[padding ? padding : 'content']">
+      <div>
+        <slot />
+      </div>
+      <div>
+        <slot name="bottomAlign" />
+      </div>
+    </div>
   </component>
 </template>
 
@@ -39,13 +43,6 @@ export default {
       type: String,
       default: null,
     },
-    /**
-     * Fixes height of card to 255px
-     * */
-    fixedHeight: {
-      type: Boolean,
-      default: false,
-    },
   },
 }
 </script>
@@ -58,15 +55,42 @@ $card-height: 255px;
   width: inherit;
   height: 100%;
   box-sizing: border-box;
+}
 
-  &.fix--height {
-    height: $card-height;
+.s {
+  padding: $space-s;
+  height: $card-height;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    div {
-      height: 100%;
-      box-sizing: border-box;
-    }
-  }
+.m {
+  padding: $space-s;
+  height: $card-height;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.l {
+  padding: $space-m;
+  height: $card-height;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  padding-top: $space-s;
+  height: $card-height;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -76,77 +100,76 @@ img {
   align-content: center;
 }
 
-.border--show {
-  box-shadow: $shadow-s;
-}
-
-.s {
-  padding: $space-s;
-}
-
-.m {
-  padding: $space-s;
-  @media #{$media-query-m} {
+@media #{$media-query-m} {
+  .m {
     padding: $space-m;
   }
-}
 
-.l {
-  padding: $space-m;
-  @media #{$media-query-m} {
+  .l {
     padding: $space-l;
   }
+}
+
+.border--show {
+  box-shadow: $shadow-s;
 }
 </style>
 
 <docs>
   ```jsx
   <Grid columns="three" spacing="m">
-    <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Paragraph variation="xsmall">Categories</Paragraph>
       <Paragraph>      
-        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <Paragraph variation="medium" bold>Lorem ipsum.
+        </Paragraph>
       </Paragraph>
+      <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>
     </Card>
-    <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+
+      <Card border padding="m" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Paragraph variation="xsmall">Categories</Paragraph>
       <Paragraph>      
-        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <Paragraph variation="medium" bold>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Paragraph>
       </Paragraph>
+      <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>    </Card>
+
+    <Card border padding="l" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Paragraph variation="xsmall">Categories</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ip
+        </Paragraph>
+      </Paragraph>
+      <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>    
     </Card>
 
     <Card media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Paragraph variation="xsmall">Categories</Paragraph>
       <Paragraph>      
-        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <Paragraph variation="medium" bold>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ip
+        </Paragraph>
       </Paragraph>
+      <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>    
     </Card>
 
-    <Card border padding="s">
-      <Tag>Category</Tag>
-      <Tag>Category</Tag>
-       <Paragraph>      
-        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </Paragraph>
-    </Card> 
-
-    <Card border padding="m">
-      <Tag>Category</Tag>
-      <Tag>Category</Tag>
-       <Paragraph>      
-        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </Paragraph>
-    </Card> 
-
-    <Card border padding="l">
+    <Card media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Paragraph variation="xsmall">Categories</Paragraph>
       <Paragraph>      
-        <Paragraph variation="medium" bold>Lorem Ipsum</Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <Paragraph variation="medium" bold>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Paragraph>
       </Paragraph>
-      <div style="height:20px;"><Link>LINK</Link></div>
-    </Card> 
+      <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>    
+    </Card>
+
+    <Card media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Paragraph variation="xsmall">Categories</Paragraph>
+      <Paragraph>      
+        <Paragraph variation="medium" bold>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Paragraph>
+      </Paragraph>
+      <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>    
+    </Card>
   </Grid>
 
   ```
