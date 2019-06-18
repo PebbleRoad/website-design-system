@@ -105,7 +105,7 @@ $card-height-tablet: 255px;
 img {
   width: inherit;
   object-fit: cover;
-  height: $card-height;
+  height: $card-height-tablet;
   align-content: center;
 }
 
