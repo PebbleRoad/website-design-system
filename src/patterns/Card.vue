@@ -1,7 +1,13 @@
 <template>
   <component :is="type" :class="[{ 'border--show': border === true }, 'card']">
     <img v-if="media" :src="media" alt="card-media" />
-    <div :class="[padding ? padding : 'content']">
+    <div
+      :class="[
+        'content',
+        padding ? padding : 'padding--default',
+        { 'fix--height': fixedHeight === true },
+      ]"
+    >
       <div>
         <slot />
       </div>
@@ -32,6 +38,9 @@ export default {
       type: String,
       default: null,
     },
+    /**
+     * Adds a border around the card
+     * */
     border: {
       type: Boolean,
       default: false,
@@ -43,12 +52,20 @@ export default {
       type: String,
       default: null,
     },
+    /**
+     * Fixes height to 255px
+     * */
+    fixedHeight: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-$card-height: 255px;
+$card-height: 235px;
+$card-height-tablet: 255px;
 
 .card {
   @include reset;
@@ -57,40 +74,32 @@ $card-height: 255px;
   box-sizing: border-box;
 }
 
+.fix--height {
+  height: $card-height;
+}
+
+.padding--default {
+  padding-top: $space-xs;
+}
+
 .s {
   padding: $space-s;
-  height: $card-height;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .m {
   padding: $space-s;
-  height: $card-height;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .l {
   padding: $space-m;
-  height: $card-height;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .content {
-  padding-top: $space-s;
-  height: $card-height;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: -4px;
 }
 
 img {
@@ -108,6 +117,14 @@ img {
   .l {
     padding: $space-l;
   }
+
+  .padding--default {
+    padding-top: $space-s;
+  }
+
+  .fix--height {
+    height: $card-height-tablet;
+  }
 }
 
 .border--show {
@@ -118,7 +135,7 @@ img {
 <docs>
   ```jsx
   <Grid columns="three" spacing="m">
-      <Card border padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Card border fixedHeight padding="s" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
       <Paragraph variation="xsmall">Categories</Paragraph>
       <Paragraph>      
         <Paragraph variation="medium" bold>Lorem ipsum.
@@ -127,7 +144,7 @@ img {
       <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>
     </Card>
 
-      <Card border padding="m" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+      <Card border fixedHeight padding="m" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
       <Paragraph variation="xsmall">Categories</Paragraph>
       <Paragraph>      
         <Paragraph variation="medium" bold>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -135,7 +152,7 @@ img {
       </Paragraph>
       <Paragraph slot="bottomAlign" variation="xsmall">Date</Paragraph>    </Card>
 
-    <Card border padding="l" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
+    <Card border fixedHeight padding="l" media="https://media.giphy.com/media/l3V0ca6GTvdB7CzJK/giphy.gif">
       <Paragraph variation="xsmall">Categories</Paragraph>
       <Paragraph>      
         <Paragraph variation="medium" bold>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ip
