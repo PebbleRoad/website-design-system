@@ -141,7 +141,7 @@ $color-placeholder: $color-grey-dark;
     color: $color-asphalt;
     width: 100%;
     margin: 0;
-    border: 1x solid $color-asphalt;
+    border: 1px solid $color-asphalt;
     box-shadow: 0;
     &::-webkit-input-placeholder {
       -webkit-font-smoothing: antialiased;
