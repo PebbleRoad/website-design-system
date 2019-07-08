@@ -305,9 +305,16 @@
     "media_query_l": {
       "type": "...",
       "category": "media-query",
-      "value": "(min-width: 1024px)",
-      "originalValue": "(min-width: 1024px)",
+      "value": "(min-width: 1280px)",
+      "originalValue": "(min-width: 1280px)",
       "name": "media_query_l"
+    },
+    "media_query_xl": {
+      "type": "...",
+      "category": "media-query",
+      "value": "(min-width: 1824px)",
+      "originalValue": "(min-width: 1824px)",
+      "name": "media_query_xl"
     },
     "shadow_s": {
       "type": "...",
