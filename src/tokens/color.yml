@@ -21,7 +21,7 @@ props:
     value: "hsla({!vivid_vermilion}, 43%, 1)"
     category: color_group_1
   color_vermilion:
-    value: "hsla({!vivid_vermilion}, 53%, 1)"
+    value: "hsla({!vivid_vermilion}, 55%, 1)"
     category: color_group_1
   color_vermilion_light:
     value: "hsla({!vivid_vermilion}, 63%, 1)"

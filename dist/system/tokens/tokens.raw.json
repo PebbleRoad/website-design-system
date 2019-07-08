@@ -137,8 +137,8 @@
     "color_vermilion": {
       "type": "color",
       "category": "color_group_1",
-      "value": "rgb(243, 96, 27)",
-      "originalValue": "hsla({!vivid_vermilion}, 53%, 1)",
+      "value": "rgb(244, 102, 37)",
+      "originalValue": "hsla({!vivid_vermilion}, 55%, 1)",
       "name": "color_vermilion"
     },
     "size_3xl": {
