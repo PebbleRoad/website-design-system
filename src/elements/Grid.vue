@@ -38,48 +38,60 @@ export default {
 
 <style lang="scss" scoped>
 .grid {
+  display: -ms-grid;
   display: grid;
   width: 100%;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
 }
 
 .one {
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
 }
 
 .two {
   @media #{$media-query-m} {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
   @media #{$media-query-l} {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .three {
   @media #{$media-query-m} {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
   @media #{$media-query-l} {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .four {
   @media #{$media-query-m} {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
   @media #{$media-query-l} {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 .six {
   @media #{$media-query-m} {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
   @media #{$media-query-l} {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
