@@ -1,6 +1,6 @@
 <template>
   <component :is="type" :class="[{ 'border--show': border === true }, 'card']">
-    <img v-if="media" :src="media" alt="card-media" />
+    <img v-if="media" :src="media" alt="card-media" class="lazyload" />
     <div
       :class="[
         'content',
