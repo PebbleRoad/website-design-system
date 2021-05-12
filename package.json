@@ -137,7 +137,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
-    "codemirror": "^5.42.0",
+    "codemirror": "^5.58.2",
     "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^1.0.1",
